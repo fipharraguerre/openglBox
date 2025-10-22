@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build OpenGLProject",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-I", "C:/glew-2.1.0/include",
+                "-I", "C:/glfw-3.4/include",
+                "-I", "C:/glm",
+                "-L", "C:/glew-2.1.0/lib/Release/x64",  // Corrected path to GLEW lib
+                "-L", "C:/glfw-3.4/lib-mingw-w64",
+                "C:/Users/unapa/OneDrive/Documentos/git/OpenGL-Project/main.cpp",
+                "-o", "OpenGLProject.exe",
+                "-lglfw3",
+                "-lglew32",  // Link to glew32.lib
+                "-lopengl32",
+                "-lgdi32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building OpenGLProject"
+        }
+    ]
+}
